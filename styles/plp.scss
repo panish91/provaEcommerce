@@ -1,0 +1,57 @@
+@import "mixins";
+
+.listing-elements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.listing-product{
+    display: flex;
+    justify-content: center;
+    flex: 0 1 20%;
+}
+.product-container{
+    margin: 20px 10px 0 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    h3{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding:20px 0 10px 0;
+    }
+    p{
+        padding-bottom: 10px;
+    }
+    strong{
+        display:block;
+        padding-bottom: 20px;
+    }
+    h3,p,strong{
+        font-family: 'Roboto';
+    }
+    button{
+        width:100%;
+        font-size:13px;
+        padding:10px;
+    }
+}
+
+@include respond(desktop){
+    .listing-product{
+        flex: 0 1 25%;
+    }
+}
+@include respond(tablet) {
+    .listing-product{
+        flex: 0 1 33%;
+    }
+}
+@include respond(mobile) {
+    .listing-product{
+        flex: 0 1 100%;
+    }
+}
